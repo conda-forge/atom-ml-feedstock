@@ -10,7 +10,7 @@ source:
   sha256: 765c36bba227e218846d33482c410d0e693ee1e8c9efc829644182d0523928e0
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -69,6 +69,7 @@ test:
   imports:
     - atom
   commands:
+    - mkdir tests/files  # Directory to save files during testing
     - coverage run -m pytest
 
 about:
