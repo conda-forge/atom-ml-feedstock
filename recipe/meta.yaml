@@ -1,5 +1,5 @@
 {% set name = "atom-ml" %}
-{% set version = "4.0.1" %}
+{% set version = "4.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 765c36bba227e218846d33482c410d0e693ee1e8c9efc829644182d0523928e0
+  sha256: 3c2ff5b60a92014cde6d858fb3b9740aa27ce3edc88c4d94a852c79ab6bf20fb
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -85,7 +85,7 @@ about:
     model to try on your data, but these are often more confusing than helpful. Best
     practices tell us to start with a simple model (e.g. linear regression) and build
     up to more complicated models (e.g. logistic regression -> random forest ->
-    multilayer perceptron) if you are not satisfied with the results. Unfortunately,
+    multi-layer perceptron) if you are not satisfied with the results. Unfortunately,
     different models require different data cleaning steps, different type/amount of
     features, tuning a new set of hyperparameters, etc. Refactoring the code for this
     purpose can be quite boring and time consuming. Because of this, many data
