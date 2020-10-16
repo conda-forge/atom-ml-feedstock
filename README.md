@@ -5,9 +5,13 @@ Home: http://github.com/tvdboom/ATOM
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/atom-ml-feedstock/blob/master/LICENSE.txt)
 
 Summary: A Python AutoML tool for fast exploration and experimentation of supervised machine learning pipelines.
+
+Development: http://github.com/tvdboom/ATOM/tree/development
+
+Documentation: http://github.com/tvdboom/ATOM/docs
 
 There is no magic formula in data science that can tell us which type of machine
 learning algorithm will perform best for a specific use-case. Different models
@@ -16,7 +20,7 @@ you can follow some rough guide on how to approach problems with regard to which
 model to try on your data, but these are often more confusing than helpful. Best
 practices tell us to start with a simple model (e.g. linear regression) and build
 up to more complicated models (e.g. logistic regression -> random forest ->
-multilayer perceptron) if you are not satisfied with the results. Unfortunately,
+multi-layer perceptron) if you are not satisfied with the results. Unfortunately,
 different models require different data cleaning steps, different type/amount of
 features, tuning a new set of hyperparameters, etc. Refactoring the code for this
 purpose can be quite boring and time consuming. Because of this, many data
