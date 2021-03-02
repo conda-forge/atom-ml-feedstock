@@ -1,5 +1,5 @@
 {% set name = "atom-ml" %}
-{% set version = "4.2.1" %}
+{% set version = "4.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7e59bc40e648fd7da3c03d43352519721e287ef4afe15832e187e062a5cb600a
+  sha256: 7591f8fd318b96d178f0205d570155089a465cafca853894ad639b900fcf7b64
 
 build:
   number: 0
@@ -29,6 +29,7 @@ requirements:
     - tabulate
     - scikit-learn
     - scikit-optimize
+    - tpot
     - category_encoders
     - imbalanced-learn
     - pandas-profiling
@@ -55,6 +56,7 @@ test:
     - tabulate
     - scikit-learn
     - scikit-optimize
+    - tpot
     - category_encoders
     - imbalanced-learn
     - pandas-profiling
@@ -78,7 +80,7 @@ about:
   home: http://github.com/tvdboom/ATOM
   license: MIT
   license_file: LICENSE
-  summary: A Python AutoML tool for fast exploration and experimentation of supervised machine learning pipelines.
+  summary: A Python package for fast exploration and experimentation of supervised machine learning pipelines.
   description: |
     There is no magic formula in data science that can tell us which type of
     machine learning algorithm will perform best for a specific use-case.
