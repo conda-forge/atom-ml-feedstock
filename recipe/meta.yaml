@@ -64,7 +64,7 @@ test:
     - gplearn
     - matplotlib-base
     - seaborn
-    - shap
+    #- shap   newest version not in conda-forge
     - py-xgboost  # [not win]
     - lightgbm
     - catboost
@@ -73,6 +73,7 @@ test:
   imports:
     - atom
   commands:
+    - pip install -U shap
     - mkdir tests/files  # Directory to save files during testing
     - coverage run -m pytest
 
