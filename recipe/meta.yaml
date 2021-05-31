@@ -1,5 +1,5 @@
 {% set name = "atom-ml" %}
-{% set version = "4.4.0" %}
+{% set version = "4.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 58d0194c43cf2856a8d7cbe2b63f11d456ed24701ffbabaf35f5589ac88a9651
+  sha256: 0f2bf84ac32e3a8ff7bba91356c2cff5cfaac90d6b7e338e27655815e3bc0a02
 
 build:
   number: 0
@@ -23,6 +23,8 @@ requirements:
     - numpy
     - scipy
     - pandas
+    - pandas-profiling
+    - mlflow
     - dill
     - tqdm
     - joblib
@@ -30,15 +32,16 @@ requirements:
     - tabulate
     - scikit-learn
     - scikit-optimize
+    - nltk
     - tpot
     - category_encoders
     - imbalanced-learn
-    - pandas-profiling
     - featuretools
     - gplearn
     - matplotlib-base
     - seaborn
     - shap
+    - wordcloud
 
 test:
   requires:
@@ -51,6 +54,8 @@ test:
     - numpy
     - scipy
     - pandas
+    - pandas-profiling
+    - mlflow
     - dill
     - tqdm
     - joblib
@@ -58,15 +63,16 @@ test:
     - tabulate
     - scikit-learn
     - scikit-optimize
+    - nltk
     - tpot
     - category_encoders
     - imbalanced-learn
-    - pandas-profiling
     - featuretools
     - gplearn
     - matplotlib-base
     - seaborn
-    #- shap   newest version not in conda-forge
+    - shap
+    - wordcloud
     - py-xgboost  # [not win]
     - lightgbm
     - catboost
@@ -75,7 +81,6 @@ test:
   imports:
     - atom
   commands:
-    - pip install -U shap
     - mkdir tests/files  # Directory to save files during testing
     - coverage run -m pytest
 
@@ -107,8 +112,7 @@ about:
     dataset, providing quick insights on which pipeline performs best
     for the task at hand.
 
-  doc_url: http://github.com/tvdboom/ATOM/docs
-  doc_source_url: http://github.com/tvdboom/ATOM/docs_sources
+  doc_url: https://tvdboom.github.io/ATOM/
   dev_url: http://github.com/tvdboom/ATOM/tree/development
 
 extra:
