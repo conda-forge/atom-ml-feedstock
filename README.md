@@ -11,7 +11,7 @@ Summary: A Python package for fast exploration of machine learning pipelines
 
 Development: http://github.com/tvdboom/ATOM/tree/development
 
-Documentation: http://github.com/tvdboom/ATOM/docs
+Documentation: https://tvdboom.github.io/ATOM/
 
 During the exploration phase of a machine learning project, a data
 scientist tries to find the optimal pipeline for his specific use case.
@@ -63,6 +63,7 @@ Installing `atom-ml` from the `conda-forge` channel can be achieved by adding `c
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `atom-ml` can be installed with:
