@@ -1,5 +1,5 @@
 {% set name = "atom-ml" %}
-{% set version = "4.6.0" %}
+{% set version = "4.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 197399a021e83ed2e17e94a16e8d3fed6485d655f333566f74dcad148c71bb81
+  sha256: 9ac47fc9ce9d40398e29e7f636ba4b50d1fa51d0d8f553d87eb512966777a143
 
 build:
   number: 0
