@@ -50,7 +50,6 @@ test:
     - coverage
     - python
     - tensorflow
-    - keras
     - numpy
     - scipy
     - pandas
