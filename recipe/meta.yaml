@@ -1,5 +1,5 @@
 {% set name = "atom-ml" %}
-{% set version = "4.7.1" %}
+{% set version = "4.7.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,8 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 85900e962442cd56b0b9bc6412f23e7e873459b5a3b03ac9d14d099b9b957de0
+  sha256: 0e436c25de37e10c870426b3f07497b757bd66d800f5ed13ec6d88980b4708ee
+
 
 build:
   number: 0
@@ -50,7 +51,6 @@ test:
     - coverage
     - python
     - tensorflow
-    - keras
     - numpy
     - scipy
     - pandas
