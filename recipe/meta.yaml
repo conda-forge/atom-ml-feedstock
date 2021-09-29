@@ -1,5 +1,5 @@
 {% set name = "atom-ml" %}
-{% set version = "4.7.3" %}
+{% set version = "4.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0e436c25de37e10c870426b3f07497b757bd66d800f5ed13ec6d88980b4708ee
+  sha256: 0cd760cf0f48dbde17500f20bdb413fceef0e4247640b13f88627a87fbb74ee9
 
 
 build:
@@ -31,7 +31,7 @@ requirements:
     - joblib
     - typeguard
     - tabulate
-    - scikit-learn
+    - scikit-learn ~= 0.24.0
     - scikit-optimize
     - nltk
     - tpot
@@ -61,7 +61,7 @@ test:
     - joblib
     - typeguard
     - tabulate
-    - scikit-learn
+    - scikit-learn ~= 0.24.0
     - scikit-optimize
     - nltk
     - tpot
