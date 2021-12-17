@@ -26,7 +26,8 @@ requirements:
     - pandas
     - pandas-profiling
     - explainerdashboard
-    - dash  # needed separately for conda
+    - dash_html_components  # needed separately for conda
+    - dash_core_components  # needed separately for conda
     - mlflow
     - dill
     - tqdm
@@ -58,7 +59,8 @@ test:
     - pandas
     - pandas-profiling
     - explainerdashboard
-    - dash  # needed separately for conda
+    - dash_html_components  # needed separately for conda
+    - dash_core_components  # needed separately for conda
     - mlflow
     - dill
     - tqdm
