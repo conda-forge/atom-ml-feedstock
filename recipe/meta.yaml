@@ -1,5 +1,5 @@
 {% set name = "atom-ml" %}
-{% set version = "4.9.1" %}
+{% set version = "4.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a9ccffe602e04dc65660de307c125363e3b6628c443dba0c7157d1ff754760ba
+  sha256: 0e0d327b625075c0fa7b16d834353359b31e30b76922e131af18ad7cfff7484f
 
 
 build:
@@ -25,6 +25,7 @@ requirements:
     - scipy
     - pandas
     - pandas-profiling
+    - dashboardexplainer
     - mlflow
     - dill
     - tqdm
@@ -55,6 +56,7 @@ test:
     - scipy
     - pandas
     - pandas-profiling
+    - dashboardexplainer
     - mlflow
     - dill
     - tqdm
