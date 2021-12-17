@@ -25,9 +25,6 @@ requirements:
     - scipy
     - pandas
     - pandas-profiling
-    - explainerdashboard
-    - dash-html-components  # needed separately for conda
-    - dash-core-components
     - dash-table
     - mlflow
     - dill
@@ -59,9 +56,6 @@ test:
     - scipy
     - pandas
     - pandas-profiling
-    - explainerdashboard
-    - dash-html-components  # needed separately for conda
-    - dash-core-components
     - dash-table
     - mlflow
     - dill
@@ -90,6 +84,7 @@ test:
     - atom
   commands:
     - mkdir tests/files  # Directory to save files during testing
+    - pip install -U explainerdashboard  # Older version on conda
     - coverage run -m pytest
 
 about:
