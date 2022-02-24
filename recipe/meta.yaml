@@ -1,5 +1,5 @@
 {% set name = "atom-ml" %}
-{% set version = "4.11.0" %}
+{% set version = "4.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4d9ed36b3726ef9d20bf3a060bb4896401489d1a95e52834014aed906824a367
+  sha256: 4b4098bb7919e88490772693e50ed3180eff0d7033724953d730766fcc5cb418
 
 
 build:
@@ -25,6 +25,7 @@ requirements:
     - scipy
     - pandas
     - pandas-profiling
+    - explainerdashboard
     - dash-table
     - mlflow
     - dill
@@ -47,15 +48,15 @@ requirements:
 
 test:
   requires:
+    - python >=3.7
     - pip
     - pytest
-    - coverage
-    - python
     - tensorflow
     - numpy
     - scipy
     - pandas
     - pandas-profiling
+    - explainerdashboard
     - dash-table
     - mlflow
     - dill
@@ -84,8 +85,7 @@ test:
     - atom
   commands:
     - mkdir tests/files  # Directory to save files during testing
-    - pip install -U explainerdashboard  # Older version on conda
-    - coverage run -m pytest
+    - pytest
 
 about:
   home: http://github.com/tvdboom/ATOM
