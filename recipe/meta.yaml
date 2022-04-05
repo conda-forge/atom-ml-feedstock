@@ -51,6 +51,7 @@ test:
     - python >=3.7
     - pip
     - pytest
+    - pytest-cov
     - tensorflow
     - numpy
     - scipy
