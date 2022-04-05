@@ -1,5 +1,5 @@
 {% set name = "atom-ml" %}
-{% set version = "4.13.0" %}
+{% set version = "4.13.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1090911d33b0102905eefb227a2bf451f85c66707afa5bda4020185d411fe3cb
+  sha256: 712d0f1efa2fdfa14b8bf2011309a934b2888bcd8db29c05b67903e6de7ec32d
 
 
 build:
@@ -86,6 +86,7 @@ test:
     - atom
   commands:
     - mkdir tests/files  # Directory to save files during testing
+    - pip install jinja2==3.0.3  # Fix for pandas-profiling
     - pip install werkzeug==2.0.0  # Fix for explainerdashboard
     - pytest
 
