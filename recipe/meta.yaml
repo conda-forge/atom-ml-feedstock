@@ -85,6 +85,7 @@ test:
     - atom
   commands:
     - mkdir tests/files  # Directory to save files during testing
+    - pip install werkzeug==2.0.0  # Fix for explainerdashboard
     - pytest
 
 about:
