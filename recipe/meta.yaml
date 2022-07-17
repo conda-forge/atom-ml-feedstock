@@ -1,5 +1,5 @@
 {% set name = "atom-ml" %}
-{% set version = "4.13.1" %}
+{% set version = "4.14.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 712d0f1efa2fdfa14b8bf2011309a934b2888bcd8db29c05b67903e6de7ec32d
+  sha256: 2b4e768ca9f38dd39c4f3054a9489272cf191d805b7c0a722792fc47e0472e60
 
 
 build:
@@ -45,6 +45,7 @@ requirements:
     - seaborn
     - shap
     - wordcloud
+    - schemdraw
 
 test:
   requires:
@@ -77,6 +78,7 @@ test:
     - seaborn
     - shap
     - wordcloud
+    - schemdraw
     - py-xgboost  # [not win]
     - lightgbm
     - catboost
@@ -85,9 +87,6 @@ test:
   imports:
     - atom
   commands:
-    - mkdir tests/files  # Directory to save files during testing
-    - pip install jinja2==3.0.3  # Fix for pandas-profiling
-    - pip install werkzeug==2.0.0  # Fix for explainerdashboard
     - pytest
 
 about:
@@ -107,7 +106,6 @@ about:
     can be time-consuming. How many times have you conducted the same action
     to pre-process a raw dataset? How many times have you copy-and-pasted
     code from an old repository to re-use it in a new use case?
-
     ATOM is here to help solve these common issues. The package acts as
     a wrapper of the whole machine learning pipeline, helping the data
     scientist to rapidly find a good model for his problem. Avoid
@@ -117,7 +115,6 @@ about:
     features and compare the performance of multiple models on a given
     dataset, providing quick insights on which pipeline performs best
     for the task at hand.
-
   doc_url: https://tvdboom.github.io/ATOM/
   dev_url: http://github.com/tvdboom/ATOM/tree/development
 
