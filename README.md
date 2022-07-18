@@ -5,7 +5,7 @@ Home: http://github.com/tvdboom/ATOM
 
 Package license: MIT
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/atom-ml-feedstock/blob/master/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/atom-ml-feedstock/blob/main/LICENSE.txt)
 
 Summary: A Python package for fast exploration of machine learning pipelines
 
@@ -24,7 +24,6 @@ keep an overview. On top of that, refactoring the code for every test
 can be time-consuming. How many times have you conducted the same action
 to pre-process a raw dataset? How many times have you copy-and-pasted
 code from an old repository to re-use it in a new use case?
-
 ATOM is here to help solve these common issues. The package acts as
 a wrapper of the whole machine learning pipeline, helping the data
 scientist to rapidly find a good model for his problem. Avoid
@@ -42,8 +41,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10822&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/atom-ml-feedstock?branchName=master">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10822&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/atom-ml-feedstock?branchName=main">
       </a>
     </td>
   </tr>

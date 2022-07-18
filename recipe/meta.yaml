@@ -1,5 +1,5 @@
 {% set name = "atom-ml" %}
-{% set version = "4.14.0" %}
+{% set version = "4.14.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2b4e768ca9f38dd39c4f3054a9489272cf191d805b7c0a722792fc47e0472e60
+  sha256: 7c639b7228bc5ca3c14a2cf9ecc622947b345639d0a3119bc444cde4b04a9e30
 
 
 build:
@@ -106,7 +106,6 @@ about:
     can be time-consuming. How many times have you conducted the same action
     to pre-process a raw dataset? How many times have you copy-and-pasted
     code from an old repository to re-use it in a new use case?
-
     ATOM is here to help solve these common issues. The package acts as
     a wrapper of the whole machine learning pipeline, helping the data
     scientist to rapidly find a good model for his problem. Avoid
@@ -116,7 +115,6 @@ about:
     features and compare the performance of multiple models on a given
     dataset, providing quick insights on which pipeline performs best
     for the task at hand.
-
   doc_url: https://tvdboom.github.io/ATOM/
   dev_url: http://github.com/tvdboom/ATOM/tree/development
 
