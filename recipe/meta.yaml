@@ -21,12 +21,11 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - category-encoders
+    - category_encoders
     - explainerdashboard
     - dill
     - evalml
     - gplearn
-    - gradio
     - imbalanced-learn
     - featuretools
     - joblib
@@ -53,12 +52,11 @@ test:
     - pip
     - pytest
     - pytest-cov
-    - category-encoders
+    - category_encoders
     - explainerdashboard
     - dill
     - evalml
     - gplearn
-    - gradio
     - imbalanced-learn
     - featuretools
     - joblib
@@ -86,6 +84,7 @@ test:
   imports:
     - atom
   commands:
+    - pip install gradio
     - pytest
 
 about:
