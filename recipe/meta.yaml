@@ -1,5 +1,5 @@
 {% set name = "atom-ml" %}
-{% set version = "4.14.1" %}
+{% set version = "5.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7c639b7228bc5ca3c14a2cf9ecc622947b345639d0a3119bc444cde4b04a9e30
+  sha256: edeaf515985c7291e65a9ef732c22cda63814983bb9f47d12b6236c174d063f4
 
 
 build:
@@ -17,68 +17,67 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
   run:
-    - python >=3.7
-    - numpy
-    - scipy
-    - pandas
-    - pandas-profiling
+    - python >=3.8
+    - category-encoders
     - explainerdashboard
-    - dash-table
-    - mlflow
     - dill
-    - tqdm
-    - joblib
-    - typeguard
-    - scikit-learn
-    - scikit-optimize
-    - nltk
-    - tpot
-    - category_encoders
+    - evalml
+    - gplearn
+    - gradio
     - imbalanced-learn
     - featuretools
-    - gplearn
-    - zoofs
+    - joblib
     - matplotlib-base
-    - seaborn
+    - mlflow
+    - nltk
+    - numpy
+    - optuna
+    - pandas
+    - pandas-profiling
+    - plotly
     - shap
-    - wordcloud
     - schemdraw
+    - scikit-learn
+    - scikit-learn-intelex
+    - scipy
+    - typeguard
+    - wordcloud
+    - zoofs
 
 test:
   requires:
-    - python >=3.7
+    - python >=3.8
     - pip
     - pytest
     - pytest-cov
-    - tensorflow
-    - numpy
-    - scipy
-    - pandas
-    - pandas-profiling
+    - category-encoders
     - explainerdashboard
-    - dash-table
-    - mlflow
     - dill
-    - tqdm
-    - joblib
-    - typeguard
-    - scikit-learn
-    - scikit-optimize
-    - nltk
-    - tpot
-    - category_encoders
+    - evalml
+    - gplearn
+    - gradio
     - imbalanced-learn
     - featuretools
-    - gplearn
-    - zoofs
+    - joblib
     - matplotlib-base
-    - seaborn
+    - mlflow
+    - nltk
+    - numpy
+    - optuna
+    - pandas
+    - pandas-profiling
+    - plotly
     - shap
-    - wordcloud
     - schemdraw
+    - scikit-learn
+    - scikit-learn-intelex
+    - scipy
+    - typeguard
+    - wordcloud
+    - zoofs
     - py-xgboost  # [not win]
     - lightgbm
     - catboost
