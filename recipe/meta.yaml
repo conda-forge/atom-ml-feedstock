@@ -19,7 +19,7 @@ requirements:
   host:
     - python >=3.8
     - pip
-    - npm
+    - pdm
   run:
     - python >=3.8
     - category_encoders
