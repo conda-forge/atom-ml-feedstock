@@ -85,7 +85,7 @@ test:
   imports:
     - atom
   commands:
-    - pip install gradio
+    - pip install -U daal4py gradio
     - pytest
 
 about:
