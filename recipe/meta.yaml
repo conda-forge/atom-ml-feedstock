@@ -1,5 +1,5 @@
 {% set name = "atom-ml" %}
-{% set version = "4.14.1" %}
+{% set version = "5.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7c639b7228bc5ca3c14a2cf9ecc622947b345639d0a3119bc444cde4b04a9e30
+  sha256: a8a578f6ed672d5a3bb02200dc173ecb97353ea9cd31e1a76e14740237c6415f
 
 
 build:
@@ -17,76 +17,48 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
+    - pdm
   run:
-    - python >=3.7
-    - numpy
-    - scipy
-    - pandas
-    - pandas-profiling
-    - explainerdashboard
-    - dash-table
-    - mlflow
-    - dill
-    - tqdm
-    - joblib
-    - typeguard
-    - scikit-learn
-    - scikit-optimize
-    - nltk
-    - tpot
+    - python >=3.8
     - category_encoders
+    - explainerdashboard
+    - dill
+    - evalml
+    - gplearn
     - imbalanced-learn
     - featuretools
-    - gplearn
-    - zoofs
+    - joblib
     - matplotlib-base
-    - seaborn
+    - mlflow
+    - nltk
+    - numpy
+    - optuna
+    - pandas
+    - pandas-profiling
+    - plotly
     - shap
-    - wordcloud
     - schemdraw
+    - scikit-learn
+    - scipy
+    - typeguard
+    - wordcloud
+    - zoofs
 
 test:
   requires:
-    - python >=3.7
-    - pip
     - pytest
     - pytest-cov
-    - tensorflow
-    - numpy
-    - scipy
-    - pandas
-    - pandas-profiling
-    - explainerdashboard
-    - dash-table
-    - mlflow
-    - dill
-    - tqdm
-    - joblib
-    - typeguard
-    - scikit-learn
-    - scikit-optimize
-    - nltk
-    - tpot
-    - category_encoders
-    - imbalanced-learn
-    - featuretools
-    - gplearn
-    - zoofs
-    - matplotlib-base
-    - seaborn
-    - shap
-    - wordcloud
-    - schemdraw
     - py-xgboost  # [not win]
     - lightgbm
     - catboost
   source_files:
     - tests
-  imports:
-    - atom
   commands:
+    - pip install -U gradio  # Not available in conda-forge
+    - pip install -U scikit-learn-intelex  # Conda implementation fails, see https://github.com/intel/scikit-learn-intelex/issues/1049
+    - pip install -U evalml  # Conda version is outdated, see https://github.com/alteryx/evalml/issues/3866
     - pytest
 
 about:
