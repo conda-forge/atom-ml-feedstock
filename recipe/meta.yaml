@@ -72,7 +72,6 @@ test:
     - shap
     - schemdraw
     - scikit-learn
-    - scikit-learn-intelex
     - scipy
     - typeguard
     - wordcloud
@@ -85,7 +84,7 @@ test:
   imports:
     - atom
   commands:
-    - pip install -U daal4py gradio
+    - pip install -U scikit-learn-intelex gradio
     - pytest
 
 about:
