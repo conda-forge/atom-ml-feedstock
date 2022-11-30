@@ -49,40 +49,13 @@ requirements:
 
 test:
   requires:
-    - python >=3.8
-    - pip
     - pytest
     - pytest-cov
-    - category_encoders
-    - explainerdashboard
-    - dill
-    - evalml
-    - gplearn
-    - imbalanced-learn
-    - featuretools
-    - joblib
-    - matplotlib-base
-    - mlflow
-    - nltk
-    - numpy
-    - optuna
-    - pandas
-    - pandas-profiling
-    - plotly
-    - shap
-    - schemdraw
-    - scikit-learn
-    - scipy
-    - typeguard
-    - wordcloud
-    - zoofs
     - py-xgboost  # [not win]
     - lightgbm
     - catboost
   source_files:
     - tests
-  imports:
-    - atom
   commands:
     - pip install -U scikit-learn-intelex gradio
     - pytest
