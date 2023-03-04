@@ -46,10 +46,6 @@ requirements:
 test:
   requires:
     - pytest
-    - pytest-cov
-    - pytest-xdist
-    - scikeras
-    - tensorflow
     - catboost
     - evalml
     - explainerdashboard
