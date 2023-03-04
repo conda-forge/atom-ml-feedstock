@@ -20,6 +20,7 @@ requirements:
     - python >=3.8
     - pip
     - pdm
+    - pdm-pep517
   run:
     - python >=3.8
     - category_encoders
