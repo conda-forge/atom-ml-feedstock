@@ -20,6 +20,7 @@ requirements:
     - python >=3.8
     - pip
     - pdm
+    - pdm-pep517
   run:
     - python >=3.8
     - category_encoders
@@ -46,10 +47,6 @@ requirements:
 test:
   requires:
     - pytest
-    - pytest-cov
-    - pytest-xdist
-    - scikeras
-    - tensorflow
     - catboost
     - evalml
     - explainerdashboard
@@ -63,6 +60,8 @@ test:
   commands:
     - pip install -U dagshub ydata-profiling  # Not available in conda-forge
     - pip install -U evalml  # Conda version is outdated, see https://github.com/alteryx/evalml/issues/3866
+    - pip install -U explainerdashboard  # Fails for some reason with conda
+    - export GIT_PYTHON_REFRESH=quiet  # Needed to make dagshub import work
     - pytest
 
 about:

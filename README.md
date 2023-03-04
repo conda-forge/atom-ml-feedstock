@@ -1,11 +1,11 @@
-About atom-ml
-=============
+About atom-ml-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/atom-ml-feedstock/blob/main/LICENSE.txt)
 
 Home: http://github.com/tvdboom/ATOM
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/atom-ml-feedstock/blob/main/LICENSE.txt)
 
 Summary: A Python package for fast exploration of machine learning pipelines
 
