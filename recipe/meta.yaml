@@ -60,6 +60,7 @@ test:
   commands:
     - pip install -U dagshub ydata-profiling  # Not available in conda-forge
     - pip install -U evalml  # Conda version is outdated, see https://github.com/alteryx/evalml/issues/3866
+    - export GIT_PYTHON_REFRESH=quiet  # Needed to make dagshub import work
     - pytest
 
 about:
