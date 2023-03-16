@@ -11,7 +11,7 @@ source:
 
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -40,7 +40,7 @@ requirements:
     - ray-serve
     - shap
     - scikit-learn
-    - scikit-learn-intelex
+    - scikit-learn-intelex; platform_machine == 'x86_64' or platform_machine == 'AMD64'"
     - scipy
     - zoofs
 
