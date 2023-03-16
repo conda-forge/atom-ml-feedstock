@@ -30,7 +30,7 @@ requirements:
     - mlflow >=2.2.0
     - modin-ray >=0.18.1
     - nltk >=3.8.1
-    - numpy >=1.23.5
+    - numpy >=1.23.0
     - optuna >=3.1.0
     - pandas >=1.5.3
     - plotly >=5.13.1
@@ -39,19 +39,19 @@ requirements:
     - scikit-learn >=1.2.1
     - scikit-learn-intelex >=2023.0.1  # [x86]
     - scipy >=1.9.3
-    - zoofs >=0.1.26
+    - zoofs >=0.1.25
 
 test:
   requires:
     - pytest >= 7.2.1
     - catboost >= 1.1.1
-    - evalml >= 0.65.0
+    - evalml-core >= 0.65.0
     - explainerdashboard >= 0.4.2
     - gradio >= 3.19.1
     - lightgbm >=3.3.5
     - schemdraw >=0.15
     - wordcloud >=1.8.2
-    - py-xgboost >=1.7.4  # [not win]
+    - py-xgboost >=1.7.1  # [not win]
   source_files:
     - tests
   commands:
