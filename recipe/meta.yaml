@@ -1,10 +1,8 @@
 {% set name = "atom-ml" %}
 {% set version = "5.1.1" %}
-
 package:
   name: {{ name|lower }}
   version: {{ version }}
-
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 24b2b4edd304ff0b1200e13f57210c5a57835f05ee49b171cd980eb7a11462d1
@@ -22,14 +20,13 @@ requirements:
     - pdm
     - pdm-pep517
   run:
-    - catboost
+    - python >=3.8
     - category_encoders
     - dill
     - gplearn
     - imbalanced-learn
     - featuretools
     - joblib
-    - lightgbm
     - matplotlib-base
     - mlflow
     - modin-ray
@@ -38,33 +35,32 @@ requirements:
     - optuna
     - pandas
     - plotly
-    - py-xgboost  # [not win]
     - ray-serve
-    - schemdraw
+    - shap
     - scikit-learn
     - scikit-learn-intelex; platform_machine == 'x86_64' or platform_machine == 'AMD64'
     - scipy
-    - shap
-    - wordcloud
     - zoofs
-    - pip:
-      - dagshub  # Not available in conda
-      - evalml  # Conda version is outdated, see https://github.com/alteryx/evalml/issues/3866
-      - explainerdashboard  # Fails for some reason with conda
-      - gradio  # Not available in conda
-      - ydata-profiling  # Not available in conda
 
 test:
   requires:
     - pytest
-    - scikeras
-    - tensorflow
+    - catboost
+    - evalml
+    - explainerdashboard
+    - gradio
+    - lightgbm
+    - schemdraw
+    - wordcloud
+    - py-xgboost  # [not win]
   source_files:
     - tests
   commands:
+    - pip install -U dagshub ydata-profiling  # Not available in conda-forge
+    - pip install -U evalml  # Conda version is outdated, see https://github.com/alteryx/evalml/issues/3866
+    - pip install -U explainerdashboard  # Fails for some reason with conda
     - export GIT_PYTHON_REFRESH=quiet  # Needed to make dagshub import work
     - pytest
-
 about:
   home: http://github.com/tvdboom/ATOM
   license: MIT
@@ -93,7 +89,6 @@ about:
     for the task at hand.
   doc_url: https://tvdboom.github.io/ATOM/
   dev_url: http://github.com/tvdboom/ATOM/tree/development
-
 extra:
   recipe-maintainers:
     - tvdboom
