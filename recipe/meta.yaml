@@ -22,13 +22,14 @@ requirements:
     - pdm
     - pdm-pep517
   run:
-    - python >=3.8
+    - catboost
     - category_encoders
     - dill
     - gplearn
     - imbalanced-learn
     - featuretools
     - joblib
+    - lightgbm
     - matplotlib-base
     - mlflow
     - modin-ray
@@ -37,30 +38,30 @@ requirements:
     - optuna
     - pandas
     - plotly
+    - py-xgboost  # [not win]
     - ray-serve
-    - shap
+    - schemdraw
     - scikit-learn
-    - scikit-learn-intelex; platform_machine == 'x86_64' or platform_machine == 'AMD64'"
+    - scikit-learn-intelex; platform_machine == 'x86_64' or platform_machine == 'AMD64'
     - scipy
+    - shap
+    - wordcloud
     - zoofs
+    - pip:
+      - dagshub  # Not available in conda
+      - evalml  # Conda version is outdated, see https://github.com/alteryx/evalml/issues/3866
+      - explainerdashboard  # Fails for some reason with conda
+      - gradio  # Not available in conda
+      - ydata-profiling  # Not available in conda
 
 test:
   requires:
     - pytest
-    - catboost
-    - evalml
-    - explainerdashboard
-    - gradio
-    - lightgbm
-    - schemdraw
-    - wordcloud
-    - py-xgboost  # [not win]
+    - scikeras
+    - tensorflow
   source_files:
     - tests
   commands:
-    - pip install -U dagshub ydata-profiling  # Not available in conda-forge
-    - pip install -U evalml  # Conda version is outdated, see https://github.com/alteryx/evalml/issues/3866
-    - pip install -U explainerdashboard  # Fails for some reason with conda
     - export GIT_PYTHON_REFRESH=quiet  # Needed to make dagshub import work
     - pytest
 
