@@ -14,11 +14,12 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python
     - pip >=23.0.1
     - pdm >=2.4.9
     - pdm-pep517 >=1.1.2
   run:
+    - python
     - category_encoders >=2.5.1
     - dill >=0.3.6
     - gplearn >=0.4.2
@@ -29,16 +30,16 @@ requirements:
     - mlflow >=2.2.0
     - modin-ray >=0.18.1
     - nltk >=3.8.1
-    - numpy >= 1.23.5
-    - optuna >= 3.1.0
-    - pandas >= 1.5.3
+    - numpy >=1.23.5
+    - optuna >=3.1.0
+    - pandas >=1.5.3
     - plotly >=5.13.1
     - ray-serve >=2.3.0
     - shap >=0.41.0
     - scikit-learn >=1.2.1
     - scikit-learn-intelex >=2023.0.1  # [x86]
     - scipy >=1.9.3
-    - zoofs >= 0.1.26
+    - zoofs >=0.1.26
 
 test:
   requires:
