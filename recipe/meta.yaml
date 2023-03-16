@@ -38,7 +38,7 @@ requirements:
     - ray-serve
     - shap
     - scikit-learn
-    - scikit-learn-intelex; platform_machine == 'x86_64' or platform_machine == 'AMD64'
+    - scikit-learn-intelex  # [x86]
     - scipy
     - zoofs
 
