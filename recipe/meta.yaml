@@ -36,7 +36,7 @@ requirements:
     - plotly >=5.13.1
     - ray-serve >=2.3.0
     - shap >=0.41.0
-    - scikit-learn >=1.2.1
+    - scikit-learn >=1.1.3
     - scikit-learn-intelex >=2023.0.1  # [x86]
     - scipy >=1.9.3
     - zoofs >=0.1.25
