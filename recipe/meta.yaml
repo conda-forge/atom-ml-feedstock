@@ -15,9 +15,9 @@ build:
 requirements:
   host:
     - python
-    - pip >=23.0.1
-    - pdm >=2.4.9
-    - pdm-pep517 >=1.1.2
+    - pip >=24.0
+    - pdm >=2.12.4
+    - pdm-pep517 >=1.1.4
   run:
     - python
     - beartype >=0.16.4
@@ -41,7 +41,7 @@ requirements:
     - shap >=0.43.0
     - sktime >=0.26.0
     - statsmodels >=0.14.1
-    - zoofs >=0.1.26
+    - zoofs >=0.1.25
 
 test:
   requires:
