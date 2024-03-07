@@ -1,16 +1,17 @@
 {% set name = "atom-ml" %}
-{% set version = "6.0.0" %}
+{% set version = "6.0.1" %}
 package:
   name: {{ name|lower }}
   version: {{ version }}
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 526b677cfa61b5d7b217585d86b3e7a9ec4acad3612d1b9aaf177dd6609fc2da
+  sha256: ce53de39e5d21e80b707a9439751ee530b5207ac4b7a0759b7fe00309752bd44
 
 
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
+  skip: true  # [py<310]
 
 requirements:
   host:
@@ -58,6 +59,7 @@ test:
     - pyspark >=3.5.0
     - ray-serve >=2.9.1
     - requests >=2.31.0
+    - scikeras >=0.11.0
     - scikit-learn-intelex >=2023.2.1  # [x86]
     - schemdraw >=0.16
     - statsforecast >=1.6.0
