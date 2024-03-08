@@ -1,12 +1,13 @@
 {% set name = "atom-ml" %}
 {% set version = "6.0.1" %}
+
 package:
   name: {{ name|lower }}
   version: {{ version }}
+
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: ce53de39e5d21e80b707a9439751ee530b5207ac4b7a0759b7fe00309752bd44
-
 
 build:
   number: 0
@@ -14,6 +15,10 @@ build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
+  build:
+    # This section is required to correctly rerender skip statement
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - python
     - pip >=24.0
@@ -40,14 +45,10 @@ requirements:
     - scikit-learn >=1.4.1.post1
     - scipy >=1.10.1
     - shap >=0.43.0
-    - sktime >=0.26.0
+    - sktime-all-extras >=0.26.0
     - statsmodels >=0.14.1
     - zoofs >=0.1.25
-
-test:
-  requires:
-    - pip >=24.0
-    - pytest >= 7.2.1
+  run_constrained:
     - botorch >= 0.8.5
     - catboost >=1.2
     - dask >=2024.2.0
@@ -66,12 +67,18 @@ test:
     - sweetviz >=2.3.1
     - wordcloud >=1.9.2
     - py-xgboost >=2.0.0  # [not win]
+
+test:
+  requires:
+    - pip >=24.0
+    - pytest >= 7.2.1
   source_files:
     - tests
   commands:
     - pip install -U dagshub  # Not available in conda-forge
     - export GIT_PYTHON_REFRESH=quiet  # Required to make dagshub import work
     - pytest
+
 about:
   home: http://github.com/tvdboom/ATOM
   license: MIT
@@ -100,6 +107,7 @@ about:
     for the task at hand.
   doc_url: https://tvdboom.github.io/ATOM/
   dev_url: http://github.com/tvdboom/ATOM/tree/development
+
 extra:
   recipe-maintainers:
     - tvdboom
