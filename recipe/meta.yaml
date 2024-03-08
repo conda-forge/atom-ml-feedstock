@@ -16,7 +16,7 @@ build:
 requirements:
   host:
     - python
-    - pip
+    - pip >=24.0
     - pdm >=2.12.4
     - pdm-pep517 >=1.1.4  # Use pdm-backend from next release
   run:
@@ -46,6 +46,7 @@ requirements:
 
 test:
   requires:
+    - pip >=24.0
     - pytest >= 7.2.1
     - botorch >= 0.8.5
     - catboost >=1.2
@@ -68,7 +69,7 @@ test:
   source_files:
     - tests
   commands:
-    - python -m pip install -U dagshub  # Not available in conda-forge
+    - pip install -U dagshub  # Not available in conda-forge
     - export GIT_PYTHON_REFRESH=quiet  # Required to make dagshub import work
     - pytest
 about:
