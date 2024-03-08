@@ -55,7 +55,6 @@ requirements:
     - polars >=0.20.7
     - pyarrow >=15.0.0
     - pyspark >=3.5.0
-    - ray-default >=2.9.1
     - ray-serve >=2.9.1
     - requests >=2.31.0
     - scikit-learn-intelex >=2023.2.1  # [x86]
@@ -68,10 +67,29 @@ requirements:
 test:
   requires:
     - pip >=24.0
-    - pytest >= 7.2.1
+    - pytest >=7.2.1
+    - botorch >=0.8.5
+    - catboost >=1.2
+    - dask >=2024.2.0
+    - explainerdashboard >=0.4.5
+    - gradio >=3.44.4
+    - lightgbm >=4.1.0
+    - modin-ray >=0.25.0
+    - polars >=0.20.7
+    - pyarrow >=15.0.0
+    - pyspark >=3.5.0
+    - ray-serve >=2.9.1
+    - requests >=2.31.0
+    - scikit-learn-intelex >=2023.2.1  # [x86]
+    - schemdraw >=0.16
+    - statsforecast >=1.6.0
+    - sweetviz >=2.3.1
+    - wordcloud >=1.9.2
+    - py-xgboost >=2.0.0  # [not win]
   source_files:
     - tests
   commands:
+    - pip check
     - pip install -U dagshub  # Not available in conda-forge
     - export GIT_PYTHON_REFRESH=quiet  # Required to make dagshub import work
     - pytest
