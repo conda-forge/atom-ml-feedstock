@@ -90,8 +90,6 @@ test:
     - tests
   commands:
     - pip install -U dagshub  # Not available in conda-forge
-    - pip install -U zoofs  # pip has a higher version than conda
-    - pip check
     - export GIT_PYTHON_REFRESH=quiet  # Required to make dagshub import work
     - pytest
 
