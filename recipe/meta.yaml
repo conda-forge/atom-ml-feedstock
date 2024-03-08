@@ -17,6 +17,8 @@ requirements:
   host:
     - python
     - pip
+    - pdm >=2.12.4
+    - pdm-backend >=2.1.8
   run:
     - python
     - beartype >=0.16.4
