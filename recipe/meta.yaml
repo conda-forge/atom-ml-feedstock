@@ -18,7 +18,7 @@ requirements:
     - python
     - pip
     - pdm >=2.12.4
-    - pdm-backend >=2.1.8
+    - pdm-pep517 >=1.1.4  # Use pdm-backend from next release
   run:
     - python
     - beartype >=0.16.4
