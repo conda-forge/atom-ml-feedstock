@@ -69,7 +69,6 @@ test:
     - pip
     - pytest >=8.1.1
     - pytest-mock >=3.12.0
-    - tensorflow>=2.16.2
 
     # Install optional dependencies
     - botorch >=0.8.5  # [not win]
@@ -96,7 +95,7 @@ test:
   imports:
     - atom
   commands:
-    - pip install -U scikeras
+    - pip install -U tensorflow scikeras
     - pip check
     - pytest
 
