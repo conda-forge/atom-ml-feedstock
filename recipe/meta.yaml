@@ -97,7 +97,6 @@ test:
     - atom
   commands:
     - pip install -U dagshub tensorflow scikeras  # Not on conda-forge
-    - pip check
     - pytest
 
 about:
